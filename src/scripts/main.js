@@ -6,11 +6,14 @@ import { createSoybean } from './seeds/soybean.js'
 import { createWheat } from './seeds/wheat.js'
 import { createSunflower } from './seeds/sunflower.js'
 import { addPlant, usePlants } from './field.js'
-console.log("Welcome to the main module")
-const yearlyPlan=createPlan(
+import { plantSeeds } from './tractor.js'
 
-)
+
+console.log("Welcome to the main module")
+const yearlyPlan=createPlan()
+console.log("yearly plan "+ yearlyPlan)
 // these functions create seeds with type, height, and output objects
+
 const cornSeed=createCorn()
 console.log(cornSeed)
 
@@ -40,3 +43,14 @@ console.log(checkingAddingCorn)
 
 const checkingUsePlants=usePlants(checkingAddingCorn)
 console.log(checkingUsePlants)
+
+// this is the tractor part
+let testArray=[
+    ["Potato", "Soybean", "Soybean", "Corn"],
+    ["Wheat", "Corn", "Wheat", "Asparagus"],
+    ["Asparagus", "Wheat", "Soybean", "Corn"],
+    ["Asparagus", "Soybean", "Potato", "Wheat"]
+]
+
+const checking=plantSeeds(testArray)
+console.log("tractor checking "+checking)
