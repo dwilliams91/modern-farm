@@ -5,10 +5,12 @@ import { createPotato } from './seeds/potato.js'
 import { createSoybean } from './seeds/soybean.js'
 import { createWheat } from './seeds/wheat.js'
 import { createSunflower } from './seeds/sunflower.js'
+import { addPlant, usePlants } from './field.js'
 console.log("Welcome to the main module")
 const yearlyPlan=createPlan(
 
 )
+// these functions create seeds with type, height, and output objects
 const cornSeed=createCorn()
 console.log(cornSeed)
 
@@ -26,3 +28,15 @@ console.log(potatoSeed)
 
 const wheatSeed=createWheat()
 console.log(wheatSeed)
+// this is the end of the creating seeds lesson
+
+// this part is testing the fields.js file
+const testingAddPlant=addPlant(sunflowerSeed)
+console.log(testingAddPlant)
+
+
+const checkingAddingCorn=addPlant(cornSeed)
+console.log(checkingAddingCorn)
+
+const checkingUsePlants=usePlants(checkingAddingCorn)
+console.log(checkingUsePlants)
