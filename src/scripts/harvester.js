@@ -50,6 +50,6 @@ export const harvestPlants = (myArray) => {
     }
 
 }
-console.log("hi", newArray)
+// console.log("hi", newArray)
 return newArray
 }

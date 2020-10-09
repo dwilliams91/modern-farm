@@ -8,6 +8,7 @@ import { createSunflower } from './seeds/sunflower.js'
 import { addPlant, field, usePlants } from './field.js'
 import { plantSeeds } from './tractor.js'
 import { harvestPlants } from './harvester.js'
+import { Catalog } from './catalog.js'
 
 
 console.log("Welcome to the main module")
@@ -52,6 +53,8 @@ let testArray=[
 ]
 // this stores the tractor part in an array
 const plantArray=plantSeeds(testArray)
-harvestPlants(field)
+let cropsToSell=harvestPlants(field)
+console.log(cropsToSell)
+// below is selling the crops
+Catalog(cropsToSell) 
 
-// keeping a set of original data so I can trouble shoot the corn
