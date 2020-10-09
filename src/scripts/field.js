@@ -1,4 +1,4 @@
-let field=[];
+export let field=[];
 // this function pushes the seed into the field array
 export const addPlant= (seed)=>{
    

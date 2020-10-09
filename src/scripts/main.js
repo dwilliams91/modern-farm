@@ -5,7 +5,7 @@ import { createPotato } from './seeds/potato.js'
 import { createSoybean } from './seeds/soybean.js'
 import { createWheat } from './seeds/wheat.js'
 import { createSunflower } from './seeds/sunflower.js'
-import { addPlant, usePlants } from './field.js'
+import { addPlant, field, usePlants } from './field.js'
 import { plantSeeds } from './tractor.js'
 import { harvestPlants } from './harvester.js'
 
@@ -55,4 +55,6 @@ let testArray=[
 // this stores the tractor part in an array
 const plantArray=plantSeeds(testArray)
 
-harvestPlants(plantArray)
+harvestPlants(field)
+
+// keeping a set of original data so I can trouble shoot the corn
