@@ -13,7 +13,7 @@ export const harvestPlants = (myArray) => {
     console.log(myArray)
     let newArray = []
     for (const plant of myArray) {
-        
+
         if (plant.hasOwnProperty("output")) {
             console.log(plant.output)
             for (let i = 0; i < plant.output; i++) {
@@ -41,8 +41,15 @@ export const harvestPlants = (myArray) => {
 
             }
         }
-       
+        else {
+            for (let q = 0; q < plant[0].output; q++) {
+                let seed=createCorn()
+                newArray.push(seed)
+
+        }
     }
-    // console.log("hi" + newArray)
-    return newArray
+
+}
+console.log("hi", newArray)
+return newArray
 }
