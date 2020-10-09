@@ -35,14 +35,12 @@ const wheatSeed=createWheat()
 // this is the end of the creating seeds lesson
 
 // this part is testing the fields.js file
-const testingAddPlant=addPlant(sunflowerSeed)
 // console.log(testingAddPlant)
 
 
-const checkingAddingCorn=addPlant(cornSeed)
 // console.log(checkingAddingCorn)
 
-const checkingUsePlants=usePlants(checkingAddingCorn)
+// const checkingUsePlants=usePlants(checkingAddingCorn)
 // console.log(checkingUsePlants)
 
 // this is the tractor part
@@ -54,7 +52,6 @@ let testArray=[
 ]
 // this stores the tractor part in an array
 const plantArray=plantSeeds(testArray)
-
 harvestPlants(field)
 
 // keeping a set of original data so I can trouble shoot the corn
