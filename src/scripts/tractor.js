@@ -22,8 +22,7 @@ export const plantSeeds = (yearsPlanting) => {
     for (i = 0; i < yearsPlanting.length; i++) {
         for (j = 0; j < yearsPlanting[i].length; j++) {
             let findCorrectSeed = yearsPlanting[i][j]
-            console.log(findCorrectSeed)
-            // this goes through and identifies the type of seed to be created
+            // this goes through and identifies the type of seed to be created. It then pushes that seed into the same array.
             if (findCorrectSeed == "Potato") {
                 let seed=createPotato()
                 addPlant(seed)
@@ -55,7 +54,7 @@ export const plantSeeds = (yearsPlanting) => {
 
     }
 let masterArray=addPlant()
-console.log(masterArray)
+// console.log(masterArray)
 return masterArray
 }
 
