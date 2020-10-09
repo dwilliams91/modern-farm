@@ -1,4 +1,4 @@
-import { addPlant } from "./field.js"
+import { addPlant,field } from "./field.js"
 import { createAsparagus } from "./seeds/asparagus.js"
 import { createPotato } from "./seeds/potato.js"
 // The plan is an array. It contains 4 arrays representing the rows in the field to be plants. 
@@ -14,43 +14,45 @@ import { createCorn } from './seeds/corn.js'
 //  (e.g. if the food type is "Asparagus", invoke the createAsparagus function to get an asparagus seed).
 export const plantSeeds = (yearsPlanting) => {
     //  i will loop through large array
-    let i = 0
     // j willloop through smaller array
-    let j = 0
-    let seed=""
-    for (i = 0; i < yearsPlanting.length; i++) {
-        for (j = 0; j < yearsPlanting[i].length; j++) {
-            
+    
+    for (let i = 0; i < yearsPlanting.length; i++) {    
+        for (let j = 0; j < yearsPlanting[i].length; j++) {
             let findCorrectSeed = yearsPlanting[i][j]
-            console.log(findCorrectSeed)
-            // this goes through and identifies the type of seed to be created
+            console.log(field)
+            // this goes through and identifies the type of seed to be created. It then pushes that seed into the same array.
             if (findCorrectSeed == "Potato") {
                 let seed=createPotato()
+                console.log(seed)
+                addPlant(seed)
             }
             else if (findCorrectSeed == "Soybean") {
                 let seed=createSoybean()
+                addPlant(seed)
             }
             else if (findCorrectSeed == "Sunflower") {
-                let seed=createSunflower()
+                let seed=createSunflower()  
+                addPlant(seed)
             }
             else if (findCorrectSeed == "Corn") {
                  let seed=createCorn()
-
+                 addPlant(seed)
             }
             else if (findCorrectSeed == "Wheat") {
-                let seed=createWheat
+                let seed=createWheat()
+                addPlant(seed)
             }
             else if (findCorrectSeed == "Asparagus") {
-                let seed=createAsparagus
+                let seed=createAsparagus()
+                addPlant(seed)
             }
-           
+
            
         }
-        let checkingVariable= addPlant(seed)
-        console.log(checkingVariable)
+        
 
     }
-    
+    console.log("This should output the field array here ",field)
 }
 
 
