@@ -52,5 +52,4 @@ let testArray=[
     ["Asparagus", "Soybean", "Potato", "Wheat"]
 ]
 
-const checking=plantSeeds(testArray)
-console.log("tractor checking "+checking)
+plantSeeds(testArray)
