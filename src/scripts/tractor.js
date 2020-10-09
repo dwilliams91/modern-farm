@@ -19,11 +19,11 @@ export const plantSeeds = (yearsPlanting) => {
     for (let i = 0; i < yearsPlanting.length; i++) {    
         for (let j = 0; j < yearsPlanting[i].length; j++) {
             let findCorrectSeed = yearsPlanting[i][j]
-            console.log(field)
+            // console.log(field)
             // this goes through and identifies the type of seed to be created. It then pushes that seed into the same array.
             if (findCorrectSeed == "Potato") {
                 let seed=createPotato()
-                console.log(seed)
+                // console.log(seed)
                 addPlant(seed)
             }
             else if (findCorrectSeed == "Soybean") {
