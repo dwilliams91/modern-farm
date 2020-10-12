@@ -15,7 +15,7 @@ export const harvestPlants = (myArray) => {
     for (const plant of myArray) {
 
         if (Array.isArray(plant)===false) {
-            console.log(plant.type)
+            // console.log(plant.type)
             for (let i = 0; i < plant.output; i++) {
                 
                 if (plant.type == "Potato") {
