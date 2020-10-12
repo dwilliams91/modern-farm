@@ -34,3 +34,15 @@ h1,h2,h3,h4,h5,h6 {
     background-color: darksalmon;
 }
 
+.messages {
+    display:flex;
+    flex-wrap: wrap;
+}
+.messages > section{
+    border: 1px solid black;
+    flex-basis:20%;
+    margin:0px 3px;
+    padding: 2px 3px;
+    text-align: center;
+    background-color: blanchedalmond;
+}

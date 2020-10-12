@@ -10,12 +10,12 @@ import { createWheat } from "./seeds/wheat.js"
 import { createCorn } from './seeds/corn.js'
 
 export const harvestPlants = (myArray) => {
-    console.log(myArray)
+    // console.log(myArray)
     let newArray = []
     for (const plant of myArray) {
 
         if (plant.hasOwnProperty("output")) {
-            console.log(plant.output)
+            // console.log(plant.output)
             for (let i = 0; i < plant.output; i++) {
                 if (plant.type == "Potato") {
                     let seed = createPotato()
@@ -50,6 +50,6 @@ export const harvestPlants = (myArray) => {
     }
 
 }
-console.log("hi", newArray)
+// console.log("hi", newArray)
 return newArray
 }
