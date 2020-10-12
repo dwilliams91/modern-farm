@@ -39,6 +39,7 @@ const wheatSeed=createWheat()
 // console.log(testingAddPlant)
 
 
+
 // console.log(checkingAddingCorn)
 
 // const checkingUsePlants=usePlants(checkingAddingCorn)
@@ -51,10 +52,16 @@ let testArray=[
     ["Asparagus", "Wheat", "Soybean", "Corn"],
     ["Asparagus", "Soybean", "Potato", "Wheat"]
 ]
+// expected output potato 2, soybean 4 so 8 soybeans
+
 // this stores the tractor part in an array
 const plantArray=plantSeeds(testArray)
+
 let cropsToSell=harvestPlants(field)
 console.log(cropsToSell)
 // below is selling the crops
 Catalog() 
 
+// I think there is a problem with usePlants
+let checking=usePlants()
+console.log("use plants ",checking)

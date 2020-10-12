@@ -52,7 +52,7 @@ export const plantSeeds = (yearsPlanting) => {
         
 
     }
-    console.log("This should output the field array here ",field)
+    // console.log("This should output the field array here ",field)
 }
 
 
