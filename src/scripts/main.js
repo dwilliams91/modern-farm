@@ -56,5 +56,5 @@ const plantArray=plantSeeds(testArray)
 let cropsToSell=harvestPlants(field)
 console.log(cropsToSell)
 // below is selling the crops
-Catalog(cropsToSell) 
+Catalog() 
 
