@@ -65,3 +65,7 @@ Catalog()
 // I think there is a problem with usePlants
 let checking=usePlants()
 console.log("use plants ",checking)
+
+
+
+console.log(cropsToSell.filter(p => p.type === "Corn"))
