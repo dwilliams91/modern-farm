@@ -14,7 +14,7 @@ export const harvestPlants = (myArray) => {
     let newArray = []
     for (const plant of myArray) {
 
-        if (Array.isArray(plant)===false) {
+        if (plant.type !="Corn") {
             // console.log(plant.type)
             for (let i = 0; i < plant.output; i++) {
                 
@@ -39,13 +39,17 @@ export const harvestPlants = (myArray) => {
                     let seed = createAsparagus()
                     newArray.push(seed)
                 }
+                
 
             }
         }
         else {
-            for (let q = 0; q < plant[0].output; q++) {
+            console.log("hi")
+            for (let q = 0; q < 3; q++) {
                 let seed=createCorn()
+
                 newArray.push(seed)
+
 
         }
     }
