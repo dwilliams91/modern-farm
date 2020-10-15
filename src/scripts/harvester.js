@@ -8,16 +8,17 @@ import { createSoybean } from "./seeds/soybean.js"
 import { createSunflower } from "./seeds/sunflower.js"
 import { createWheat } from "./seeds/wheat.js"
 import { createCorn } from './seeds/corn.js'
+import { createCorn2 } from './seeds/secondCreateCorn.js'
+
 
 export const harvestPlants = (myArray) => {
     // console.log(myArray)
     let newArray = []
     for (const plant of myArray) {
 
-        if (Array.isArray(plant)===false) {
+        if (plant.type != "Corn") {
             // console.log(plant.type)
             for (let i = 0; i < plant.output; i++) {
-                
                 if (plant.type == "Potato") {
                     let seed = createPotato()
                     newArray.push(seed)
@@ -43,14 +44,13 @@ export const harvestPlants = (myArray) => {
             }
         }
         else {
-            for (let q = 0; q < plant[0].output; q++) {
-                let seed=createCorn()
+            for (let q = 0; q < plant.output /2 ; q++) {
+                let seed = createCorn2()
                 newArray.push(seed)
-
+            }
         }
-    }
 
-}
-// console.log("hi", newArray)
-return newArray
+    }
+    // console.log("hi", newArray)
+    return newArray
 }

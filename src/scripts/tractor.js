@@ -36,7 +36,10 @@ export const plantSeeds = (yearsPlanting) => {
             }
             else if (findCorrectSeed == "Corn") {
                  let seed=createCorn()
-                 addPlant(seed)
+                //  console.log("seed",seed)
+                 addPlant(seed[0])
+                 addPlant(seed[1])
+
             }
             else if (findCorrectSeed == "Wheat") {
                 let seed=createWheat()
